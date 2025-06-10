@@ -6,6 +6,7 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="lib" path="/home/user/Downloads/Bank-Management-System--master/resources/jcalendar-1.4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sumit/Downloads/Bank-Management-System--master (2)/Bank-Management-System--master/resources/jcalendar-1.4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sumit/Downloads/mysql-connector-java-8.0.28.jar"/>
 	<classpathentry kind="output" path="out/production/Bank Management System"/>
 </classpath>

@@ -4,6 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Deposit extends JFrame implements ActionListener {
@@ -63,12 +64,14 @@ public class Deposit extends JFrame implements ActionListener {
         try {
             String amount = textField.getText();
             Date date = new Date();
+            SimpleDateFormat formatter=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+            String formattedDate=formatter.format(date);
             if (e.getSource()==b1){
                 if (textField.getText().equals("")){
                     JOptionPane.showMessageDialog(null,"Please enter the Amount you want to Deposit");
                 }else {
                     Connn c = new Connn();
-                    c.statement.executeUpdate("insert into bank values('"+pin+"', '"+date+"','Deposit', '"+amount+"')");
+                    c.statement.executeUpdate("insert into bank values('"+pin+"', '"+formattedDate+"','Deposit', '"+amount+"')");
                     JOptionPane.showMessageDialog(null,"Rs. "+amount+" Deposited Successfully");
                     setVisible(false);
                     new main_Class(pin);
